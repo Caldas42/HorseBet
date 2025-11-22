@@ -5,146 +5,146 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [Header("Horses")]
-    [SerializeField] private GameObject blueHorse;
-    [SerializeField] private GameObject greenHorse;
-    [SerializeField] private GameObject yellowHorse;
+    [SerializeField] private GameObject whiteHorse;
+    [SerializeField] private GameObject goldenHorse;
+    [SerializeField] private GameObject blackHorse;
 
     [Header("Panels")]
-    [SerializeField] private GameObject bluePanel;
-    [SerializeField] private GameObject greenPanel;
-    [SerializeField] private GameObject yellowPanel;
+    [SerializeField] private GameObject whitePanel;
+    [SerializeField] private GameObject goldenPanel;
+    [SerializeField] private GameObject blackPanel;
     [SerializeField] private GameObject finalPanel;
-    [SerializeField] private GameObject blueWinPanel;
-    [SerializeField] private GameObject greenWinPanel;
-    [SerializeField] private GameObject yellowWinPanel;
+    [SerializeField] private GameObject whiteWinPanel;
+    [SerializeField] private GameObject goldenWinPanel;
+    [SerializeField] private GameObject blackWinPanel;
 
     [Header("Power Buttons")]
-    [SerializeField] private GameObject bluePowerButtons;
-    [SerializeField] private GameObject greenPowerButtons;
-    [SerializeField] private GameObject yellowPowerButtons;
+    [SerializeField] private GameObject whitePowerButtons;
+    [SerializeField] private GameObject goldenPowerButtons;
+    [SerializeField] private GameObject blackPowerButtons;
 
     [Header("Dices")]
-    [SerializeField] private GameObject blueDice;
-    [SerializeField] private GameObject greenDice;
-    [SerializeField] private GameObject yellowDice;
+    [SerializeField] private GameObject whiteDice;
+    [SerializeField] private GameObject goldenDice;
+    [SerializeField] private GameObject blackDice;
 
     [Header("NextHuds")]
-    [SerializeField] private GameObject blueNextHud;
-    [SerializeField] private GameObject greenNextHud;
-    [SerializeField] private GameObject yellowNextHud;
+    [SerializeField] private GameObject whiteNextHud;
+    [SerializeField] private GameObject goldenNextHud;
+    [SerializeField] private GameObject blackNextHud;
 
     [Header("Dice Texts")]
-    [SerializeField] private TextMeshProUGUI blueDiceText;
-    [SerializeField] private TextMeshProUGUI greenDiceText;
-    [SerializeField] private TextMeshProUGUI yellowDiceText;
+    [SerializeField] private TextMeshProUGUI whiteDiceText;
+    [SerializeField] private TextMeshProUGUI goldenDiceText;
+    [SerializeField] private TextMeshProUGUI blackDiceText;
 
     void Start()
     {
-        bluePanel.SetActive(true);
-        greenPanel.SetActive(false);
-        yellowPanel.SetActive(false);
+        whitePanel.SetActive(true);
+        goldenPanel.SetActive(false);
+        blackPanel.SetActive(false);
         finalPanel.SetActive(false);
     }
 
     void Update()
     {
-        if (blueHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= blueHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
+        if (whiteHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= whiteHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
         {
-            bluePanel.SetActive(false);
-            blueWinPanel.SetActive(true);
+            whitePanel.SetActive(false);
+            whiteWinPanel.SetActive(true);
         }
 
-        if (greenHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= greenHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
+        if (goldenHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= goldenHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
         {
-            bluePanel.SetActive(false);
-            greenWinPanel.SetActive(true);
+            whitePanel.SetActive(false);
+            goldenWinPanel.SetActive(true);
         }
 
-        if (yellowHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= yellowHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
+        if (blackHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= blackHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
         {
-            bluePanel.SetActive(false);
-            yellowWinPanel.SetActive(true);
+            whitePanel.SetActive(false);
+            blackWinPanel.SetActive(true);
         }
     }
 
-    public void OnBluePowerButtonClicked()
+    public void OnWhitePowerButtonClicked()
     {
-        bluePowerButtons.SetActive(false);
-        blueDice.SetActive(true);
+        whitePowerButtons.SetActive(false);
+        whiteDice.SetActive(true);
     }
 
-    public void OnBlueDiceClicked()
+    public void OnWhiteDiceClicked()
     {
-        blueDice.SetActive(false);
-        blueNextHud.SetActive(true);
+        whiteDice.SetActive(false);
+        whiteNextHud.SetActive(true);
     }
 
-    public void OnBlueNextButtonClicked()
+    public void OnWhiteNextButtonClicked()
     {
-        bluePanel.SetActive(false);
-        greenPanel.SetActive(true);
-        blueNextHud.SetActive(false);
-        bluePowerButtons.SetActive(true);
+        whitePanel.SetActive(false);
+        goldenPanel.SetActive(true);
+        whiteNextHud.SetActive(false);
+        whitePowerButtons.SetActive(true);
     }
 
-    public void OnGreenPowerButtonClicked()
+    public void OnGoldenPowerButtonClicked()
     {
-        greenPowerButtons.SetActive(false);
-        greenDice.SetActive(true);
+        goldenPowerButtons.SetActive(false);
+        goldenDice.SetActive(true);
     }
 
-    public void OnGreenDiceClicked()
+    public void OnGoldenDiceClicked()
     {
-        greenDice.SetActive(false);
-        greenNextHud.SetActive(true);
+        goldenDice.SetActive(false);
+        goldenNextHud.SetActive(true);
     }
 
-    public void OnGreenNextButtonClicked()
+    public void OnGoldenNextButtonClicked()
     {
-        greenPanel.SetActive(false);
-        yellowPanel.SetActive(true);
-        greenNextHud.SetActive(false);
-        greenPowerButtons.SetActive(true);
+        goldenPanel.SetActive(false);
+        blackPanel.SetActive(true);
+        goldenNextHud.SetActive(false);
+        goldenPowerButtons.SetActive(true);
     }
 
-    public void OnYellowPowerButtonClicked()
+    public void OnBlackPowerButtonClicked()
     {
-        yellowPowerButtons.SetActive(false);
-        yellowDice.SetActive(true);
+        blackPowerButtons.SetActive(false);
+        blackDice.SetActive(true);
     }
 
-    public void OnYellowDiceClicked()
+    public void OnBlackDiceClicked()
     {
-        yellowDice.SetActive(false);
-        yellowNextHud.SetActive(true);
+        blackDice.SetActive(false);
+        blackNextHud.SetActive(true);
     }
     
-    public void OnYellowNextButtonClicked()
+    public void OnBlackNextButtonClicked()
     {
-        yellowPanel.SetActive(false);
+        blackPanel.SetActive(false);
         finalPanel.SetActive(true);
-        yellowNextHud.SetActive(false);
-        yellowPowerButtons.SetActive(true);
+        blackNextHud.SetActive(false);
+        blackPowerButtons.SetActive(true);
     }
 
     public void OnFinalButtonClicked()
     {
         finalPanel.SetActive(false);
-        bluePanel.SetActive(true);
+        whitePanel.SetActive(true);
     }
 
-    public void SetBlueDiceText()
+    public void SetWhiteDiceText()
     {
-        blueDiceText.text = blueDice.GetComponent<RollDice>().GetLastRoll().ToString();
+        whiteDiceText.text = whiteDice.GetComponent<RollDice>().GetLastRoll().ToString();
     }
 
-    public void SetGreenDiceText()
+    public void SetGoldenDiceText()
     {
-        greenDiceText.text = greenDice.GetComponent<RollDice>().GetLastRoll().ToString();
+        goldenDiceText.text = goldenDice.GetComponent<RollDice>().GetLastRoll().ToString();
     }
 
-    public void SetYellowDiceText()
+    public void SetBlackDiceText()
     {
-        yellowDiceText.text = yellowDice.GetComponent<RollDice>().GetLastRoll().ToString();
+        blackDiceText.text = blackDice.GetComponent<RollDice>().GetLastRoll().ToString();
     }
 }

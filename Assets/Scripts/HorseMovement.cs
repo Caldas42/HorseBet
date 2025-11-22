@@ -7,6 +7,7 @@ public class HorseMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private RollDice dice;
 
+    [Header("Horse Sprites")]
     [SerializeField] private SpriteRenderer horseSpriteRenderer;
     [SerializeField] private List<Sprite> horseSprites;
     [SerializeField] private float spriteChangeSpeed = 0.1f;
@@ -39,6 +40,7 @@ public class HorseMovement : MonoBehaviour
 
                 horseSpriteRenderer.sprite = horseSprites[currentSpriteIndex];
             }
+
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)

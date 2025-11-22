@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 51337485}
   - component: {fileID: 51337484}
   m_Layer: 5
-  m_Name: BlueDice
+  m_Name: WhiteDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +409,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnBlueDiceClicked
+        m_MethodName: OnWhiteDiceClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -421,7 +421,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SetBlueDiceText
+        m_MethodName: SetWhiteDiceText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1009,7 +1009,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnBluePowerButtonClicked
+        m_MethodName: OnWhitePowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1464,7 +1464,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnBluePowerButtonClicked
+        m_MethodName: OnWhitePowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1879,7 +1879,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnGreenPowerButtonClicked
+        m_MethodName: OnGoldenPowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2065,7 +2065,7 @@ GameObject:
   - component: {fileID: 272591131}
   - component: {fileID: 272591132}
   m_Layer: 0
-  m_Name: Grass
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2080,11 +2080,11 @@ Transform:
   m_GameObject: {fileID: 272591130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.46, y: 2.31, z: 10}
+  m_LocalPosition: {x: -0.46002197, y: 2.3099976, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 897315084}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &272591132
 SpriteRenderer:
@@ -4554,7 +4554,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnYellowPowerButtonClicked
+        m_MethodName: OnBlackPowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4923,7 +4923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- 2 Azul'
+  m_text: '- 2 Branco'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5265,8 +5265,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 377.69995, y: -135}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 700, y: -280}
+  m_SizeDelta: {x: 750, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &612375702
 MonoBehaviour:
@@ -5281,7 +5281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  m_Color: {r: 0.10588236, g: 0.10588236, b: 0.10588236, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6322,8 +6322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 377.69995, y: -135}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 700, y: -280}
+  m_SizeDelta: {x: 750, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &718145701
 MonoBehaviour:
@@ -6338,7 +6338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.120004654, a: 0.392}
+  m_Color: {r: 0.8705883, g: 0.10980393, b: 0.10588236, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6872,7 +6872,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- 2 Verde'
+  m_text: '- 2 Dourado
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7516,7 +7518,7 @@ GameObject:
   - component: {fileID: 825355910}
   - component: {fileID: 825355909}
   m_Layer: 5
-  m_Name: Minus2BlueButton
+  m_Name: Minus2WhiteButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7600,7 +7602,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnYellowPowerButtonClicked
+        m_MethodName: OnBlackPowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8016,8 +8018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: -139}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 700, y: -280}
+  m_SizeDelta: {x: 750, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &875349916
 MonoBehaviour:
@@ -8032,7 +8034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  m_Color: {r: 0.10588236, g: 0.10588236, b: 0.10588236, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8147,8 +8149,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 272591131}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &897315085
@@ -9633,28 +9634,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19bcf103665eb1948ada67eb69d0bf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  blueHorse: {fileID: 373331452}
-  greenHorse: {fileID: 923722229}
-  yellowHorse: {fileID: 1796119856}
-  bluePanel: {fileID: 1048892563}
-  greenPanel: {fileID: 1430130557}
-  yellowPanel: {fileID: 612375700}
+  whiteHorse: {fileID: 373331452}
+  goldenHorse: {fileID: 923722229}
+  blackHorse: {fileID: 1796119856}
+  whitePanel: {fileID: 1048892563}
+  goldenPanel: {fileID: 1430130557}
+  blackPanel: {fileID: 612375700}
   finalPanel: {fileID: 718145699}
-  blueWinPanel: {fileID: 2122932952}
-  greenWinPanel: {fileID: 1452315522}
-  yellowWinPanel: {fileID: 875349914}
-  bluePowerButtons: {fileID: 1111194222}
-  greenPowerButtons: {fileID: 2081907715}
-  yellowPowerButtons: {fileID: 160204342}
-  blueDice: {fileID: 51337482}
-  greenDice: {fileID: 1368873177}
-  yellowDice: {fileID: 1177736186}
-  blueNextHud: {fileID: 61947411}
-  greenNextHud: {fileID: 483851242}
-  yellowNextHud: {fileID: 255537983}
-  blueDiceText: {fileID: 1430605137}
-  greenDiceText: {fileID: 1777928441}
-  yellowDiceText: {fileID: 1243643714}
+  whiteWinPanel: {fileID: 2122932952}
+  goldenWinPanel: {fileID: 1452315522}
+  blackWinPanel: {fileID: 875349914}
+  whitePowerButtons: {fileID: 1111194222}
+  goldenPowerButtons: {fileID: 2081907715}
+  blackPowerButtons: {fileID: 160204342}
+  whiteDice: {fileID: 51337482}
+  goldenDice: {fileID: 1368873177}
+  blackDice: {fileID: 1177736186}
+  whiteNextHud: {fileID: 61947411}
+  goldenNextHud: {fileID: 483851242}
+  blackNextHud: {fileID: 255537983}
+  whiteDiceText: {fileID: 1430605137}
+  goldenDiceText: {fileID: 1777928441}
+  blackDiceText: {fileID: 1243643714}
 --- !u!1 &1044469260
 GameObject:
   m_ObjectHideFlags: 0
@@ -9762,7 +9763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1048892564
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9782,8 +9783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 377.7, y: -135}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 700, y: -280}
+  m_SizeDelta: {x: 750, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048892565
 MonoBehaviour:
@@ -9798,7 +9799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
+  m_Color: {r: 0.81568635, g: 0.8000001, b: 0.7960785, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10193,7 +10194,7 @@ GameObject:
   - component: {fileID: 1177736188}
   - component: {fileID: 1177736187}
   m_Layer: 5
-  m_Name: YellowDice
+  m_Name: BlackDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10269,7 +10270,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnYellowDiceClicked
+        m_MethodName: OnBlackDiceClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10281,7 +10282,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SetYellowDiceText
+        m_MethodName: SetBlackDiceText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10496,7 +10497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- 2 Amarelo'
+  m_text: '- 2 Preto'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11475,7 +11476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- 2 Azul'
+  m_text: '- 2 Branco'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11567,7 +11568,7 @@ GameObject:
   - component: {fileID: 1278912279}
   - component: {fileID: 1278912278}
   m_Layer: 5
-  m_Name: Minus2GreenButton
+  m_Name: Minus2GoldenButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11651,7 +11652,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnBluePowerButtonClicked
+        m_MethodName: OnWhitePowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12389,7 +12390,7 @@ GameObject:
   - component: {fileID: 1368873179}
   - component: {fileID: 1368873178}
   m_Layer: 5
-  m_Name: GreenDice
+  m_Name: GoldenDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12465,7 +12466,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnGreenDiceClicked
+        m_MethodName: OnGoldenDiceClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12477,7 +12478,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SetGreenDiceText
+        m_MethodName: SetGoldenDiceText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13122,8 +13123,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 377.7, y: -135}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 700, y: -280}
+  m_SizeDelta: {x: 750, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430130559
 MonoBehaviour:
@@ -13138,7 +13139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8431373, b: 0, a: 1}
+  m_Color: {r: 0.83921576, g: 0.6627451, b: 0.32156864, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13384,7 +13385,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnBlueNextButtonClicked
+        m_MethodName: OnWhiteNextButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13604,8 +13605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: -139}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 700, y: -280}
+  m_SizeDelta: {x: 750, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1452315524
 MonoBehaviour:
@@ -13620,7 +13621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8431373, b: 0, a: 1}
+  m_Color: {r: 0.83921576, g: 0.6627451, b: 0.32156864, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13730,7 +13731,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnGreenNextButtonClicked
+        m_MethodName: OnGoldenNextButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14485,7 +14486,7 @@ GameObject:
   - component: {fileID: 1640130447}
   - component: {fileID: 1640130446}
   m_Layer: 5
-  m_Name: Minus2GreenButton
+  m_Name: Minus2GoldenButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14569,7 +14570,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnYellowPowerButtonClicked
+        m_MethodName: OnBlackPowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14894,7 +14895,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnYellowPowerButtonClicked
+        m_MethodName: OnBlackPowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15179,7 +15180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- 2 Amarelo'
+  m_text: '- 2 Preto'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15961,7 +15962,7 @@ GameObject:
   - component: {fileID: 1836903511}
   - component: {fileID: 1836903510}
   m_Layer: 5
-  m_Name: Minus2BlueButton
+  m_Name: Minus2WhiteButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16045,7 +16046,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnGreenPowerButtonClicked
+        m_MethodName: OnGoldenPowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16660,7 +16661,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnGreenPowerButtonClicked
+        m_MethodName: OnGoldenPowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16945,7 +16946,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- 2 Verde'
+  m_text: '- 2 Dourado'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17515,7 +17516,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnYellowNextButtonClicked
+        m_MethodName: OnBlackNextButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17666,7 +17667,7 @@ GameObject:
   - component: {fileID: 2025373019}
   - component: {fileID: 2025373018}
   m_Layer: 5
-  m_Name: Minus2YellowButton
+  m_Name: Minus2BlackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17750,7 +17751,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnGreenPowerButtonClicked
+        m_MethodName: OnGoldenPowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17901,7 +17902,7 @@ GameObject:
   - component: {fileID: 2047606261}
   - component: {fileID: 2047606260}
   m_Layer: 5
-  m_Name: Minus2YellowButton
+  m_Name: Minus2BlackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17985,7 +17986,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1031062334}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnBluePowerButtonClicked
+        m_MethodName: OnWhitePowerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18289,8 +18290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 366, y: -139}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 700, y: -280}
+  m_SizeDelta: {x: 750, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122932954
 MonoBehaviour:
@@ -18305,7 +18306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
+  m_Color: {r: 0.81568635, g: 0.8000001, b: 0.7960785, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18339,4 +18340,5 @@ SceneRoots:
   - {fileID: 422840374}
   - {fileID: 500122354}
   - {fileID: 873391661}
+  - {fileID: 272591131}
   - {fileID: 630070770}
