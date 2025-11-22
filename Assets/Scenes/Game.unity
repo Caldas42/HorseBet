@@ -3314,7 +3314,7 @@ GameObject:
   - component: {fileID: 373331455}
   - component: {fileID: 373331454}
   m_Layer: 6
-  m_Name: BlueHorse
+  m_Name: WhiteHorse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5240,7 +5240,7 @@ GameObject:
   - component: {fileID: 612375703}
   - component: {fileID: 612375702}
   m_Layer: 5
-  m_Name: YellowPanel
+  m_Name: BlackPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5281,7 +5281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6338,7 +6338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0, b: 0.120004654, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7992,7 +7992,7 @@ GameObject:
   - component: {fileID: 875349917}
   - component: {fileID: 875349916}
   m_Layer: 5
-  m_Name: YellowWinPanel
+  m_Name: BlackWinPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8032,7 +8032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8295,7 +8295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906621517}
   m_Layer: 0
-  m_Name: GreenApples
+  m_Name: GoldenApples
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8361,7 +8361,7 @@ GameObject:
   - component: {fileID: 923722231}
   - component: {fileID: 923722232}
   m_Layer: 0
-  m_Name: GreenHorse
+  m_Name: GoldenHorse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9757,7 +9757,7 @@ GameObject:
   - component: {fileID: 1048892566}
   - component: {fileID: 1048892565}
   m_Layer: 5
-  m_Name: BluePanel
+  m_Name: WhitePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9798,7 +9798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13097,7 +13097,7 @@ GameObject:
   - component: {fileID: 1430130560}
   - component: {fileID: 1430130559}
   m_Layer: 5
-  m_Name: GreenPanel
+  m_Name: GoldenPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13138,7 +13138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 0.392}
+  m_Color: {r: 1, g: 0.8431373, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13580,7 +13580,7 @@ GameObject:
   - component: {fileID: 1452315525}
   - component: {fileID: 1452315524}
   m_Layer: 5
-  m_Name: GreenWinPanel
+  m_Name: GoldenWinPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13620,7 +13620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 0.392}
+  m_Color: {r: 1, g: 0.8431373, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13878,7 +13878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471911143}
   m_Layer: 0
-  m_Name: BlueApples
+  m_Name: WhiteApples
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15496,7 +15496,7 @@ GameObject:
   - component: {fileID: 1796119858}
   - component: {fileID: 1796119859}
   m_Layer: 0
-  m_Name: YellowHorse
+  m_Name: BlackHorse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16419,7 +16419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1851340169}
   m_Layer: 0
-  m_Name: YellowApples
+  m_Name: BlackApples
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18265,7 +18265,7 @@ GameObject:
   - component: {fileID: 2122932955}
   - component: {fileID: 2122932954}
   m_Layer: 5
-  m_Name: BlueWinPanel
+  m_Name: WhiteWinPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18305,7 +18305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
