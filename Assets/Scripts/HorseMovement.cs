@@ -7,6 +7,11 @@ public class HorseMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private RollDice dice;
 
+    [SerializeField] private SpriteRenderer horseSpriteRenderer;
+    [SerializeField] private List<Sprite> horseSprites;
+    [SerializeField] private float spriteChangeSpeed = 0.1f;
+
+
     private int currentIndex = 0;
     private int previousIndex = 0;
     private int steps = 0;
@@ -14,10 +19,26 @@ public class HorseMovement : MonoBehaviour
     private bool isMoving = false;
     private Vector3 targetPosition;
 
+    private int currentSpriteIndex = 0;
+    private float spriteTimer = 0f;
+
+
     void Update()
     {
         if (isMoving)
         {
+            spriteTimer += Time.deltaTime;
+
+            if (spriteTimer >= spriteChangeSpeed)
+            {
+                spriteTimer = 0f;
+                currentSpriteIndex++;
+
+                if (currentSpriteIndex >= horseSprites.Count)
+                    currentSpriteIndex = 0;
+
+                horseSpriteRenderer.sprite = horseSprites[currentSpriteIndex];
+            }
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
