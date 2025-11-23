@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldenDiceText;
     [SerializeField] private TextMeshProUGUI blackDiceText;
 
+    private bool gameFinished = false;
+
     void Start()
     {
         whitePanel.SetActive(true);
@@ -47,25 +49,34 @@ public class GameManager : MonoBehaviour
     }
 
     void Update()
+{
+    if (gameFinished)
+        return;
+
+    if (whiteHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= whiteHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
     {
-        if (whiteHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= whiteHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
-        {
-            whitePanel.SetActive(false);
-            whiteWinPanel.SetActive(true);
-        }
-
-        if (goldenHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= goldenHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
-        {
-            whitePanel.SetActive(false);
-            goldenWinPanel.SetActive(true);
-        }
-
-        if (blackHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= blackHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
-        {
-            whitePanel.SetActive(false);
-            blackWinPanel.SetActive(true);
-        }
+        gameFinished = true;
+        whitePanel.SetActive(false);
+        whiteWinPanel.SetActive(true);
+        return;
     }
+
+    if (goldenHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= goldenHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
+    {
+        gameFinished = true;
+        whitePanel.SetActive(false);
+        goldenWinPanel.SetActive(true);
+        return;
+    }
+
+    if (blackHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= blackHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
+    {
+        gameFinished = true;
+        whitePanel.SetActive(false);
+        blackWinPanel.SetActive(true);
+        return;
+    }
+}
 
     public void OnWhitePowerButtonClicked()
     {
