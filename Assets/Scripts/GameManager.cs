@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject whiteWinPanel;
     [SerializeField] private GameObject goldenWinPanel;
     [SerializeField] private GameObject blackWinPanel;
+    [SerializeField] private GameObject tiePanel;
 
     [Header("Power Buttons")]
     [SerializeField] private GameObject whitePowerButtons;
@@ -38,7 +38,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldenDiceText;
     [SerializeField] private TextMeshProUGUI blackDiceText;
 
-    private bool gameFinished = false;
+    private int whiteLastSteps;
+    private int goldenLastSteps;
+    private int blackLastSteps;
+
+    private bool whiteWon = false;
+    private bool goldenWon = false;
+    private bool blackWon = false;
 
     void Start()
     {
@@ -49,34 +55,121 @@ public class GameManager : MonoBehaviour
     }
 
     void Update()
-{
-    if (gameFinished)
-        return;
-
-    if (whiteHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= whiteHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
     {
-        gameFinished = true;
-        whitePanel.SetActive(false);
-        whiteWinPanel.SetActive(true);
-        return;
-    }
+        whiteLastSteps = whiteHorse.GetComponent<HorseMovement>().GetLastSteps();
+        goldenLastSteps = goldenHorse.GetComponent<HorseMovement>().GetLastSteps();
+        blackLastSteps = blackHorse.GetComponent<HorseMovement>().GetLastSteps();
 
-    if (goldenHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= goldenHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
-    {
-        gameFinished = true;
-        whitePanel.SetActive(false);
-        goldenWinPanel.SetActive(true);
-        return;
-    }
+        if (whiteHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= whiteHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
+        {
+            whiteWon = true;
+        }
 
-    if (blackHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= blackHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
-    {
-        gameFinished = true;
-        whitePanel.SetActive(false);
-        blackWinPanel.SetActive(true);
-        return;
+        if (goldenHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= goldenHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
+        {
+            goldenWon = true;
+        }
+
+        if (blackHorse.GetComponent<HorseMovement>().GetCurrentIndex() >= blackHorse.GetComponent<HorseMovement>().GetApplesCount() - 1)
+        {
+            blackWon = true;
+        }
+
+        if (whiteWon || goldenWon || blackWon)
+        {
+            if (whiteWon && !goldenWon && !blackWon)
+            {
+                whitePanel.SetActive(false);
+                whiteWinPanel.SetActive(true);
+            }
+            else if (!whiteWon && goldenWon && !blackWon)
+            {
+                whitePanel.SetActive(false);
+                goldenWinPanel.SetActive(true);
+            }
+            else if (!whiteWon && !goldenWon && blackWon)
+            {
+                whitePanel.SetActive(false);
+                blackWinPanel.SetActive(true);
+            } 
+            else if (whiteWon && goldenWon)
+            {
+                if (whiteLastSteps > goldenLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    whiteWinPanel.SetActive(true);
+                }
+                else if (goldenLastSteps > whiteLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    goldenWinPanel.SetActive(true);
+                } else
+                {
+                    whitePanel.SetActive(false);
+                    tiePanel.SetActive(true);
+                }
+            }
+            else if (whiteWon && blackWon)
+            {
+                if (whiteLastSteps > blackLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    whiteWinPanel.SetActive(true);
+                }
+                else if (blackLastSteps > whiteLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    blackWinPanel.SetActive(true);
+                }
+                else
+                {
+                    whitePanel.SetActive(false);
+                    tiePanel.SetActive(true);
+                }
+            }
+            else if (goldenWon && blackWon)
+            {
+                if (goldenLastSteps > blackLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    goldenWinPanel.SetActive(true);
+                }
+                else if (blackLastSteps > goldenLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    blackWinPanel.SetActive(true);
+                }
+                else
+                {
+                    whitePanel.SetActive(false);
+                    tiePanel.SetActive(true);
+                }
+            }
+            else if (whiteWon && goldenWon && blackWon)
+            {
+                if (whiteLastSteps > goldenLastSteps && whiteLastSteps > blackLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    whiteWinPanel.SetActive(true);
+                }
+                else if (goldenLastSteps > whiteLastSteps && goldenLastSteps > blackLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    goldenWinPanel.SetActive(true);
+                }
+                else if (blackLastSteps > whiteLastSteps && blackLastSteps > goldenLastSteps)
+                {
+                    whitePanel.SetActive(false);
+                    blackWinPanel.SetActive(true);
+                }
+                else
+                {
+                    whitePanel.SetActive(false);
+                    tiePanel.SetActive(true);
+                }
+            }
+        }
     }
-}
 
     public void OnWhitePowerButtonClicked()
     {

@@ -16,6 +16,7 @@ public class HorseMovement : MonoBehaviour
     private int currentIndex = 0;
     private int previousIndex = 0;
     private int steps = 0;
+    private int lastSteps = 0;
     private bool doubled = false;
     private bool isMoving = false;
     private Vector3 targetPosition;
@@ -82,6 +83,7 @@ public class HorseMovement : MonoBehaviour
         if (steps != 0)
         {
             currentIndex += steps;
+            lastSteps = currentIndex;
             steps = 0;
 
             if (currentIndex < 0)
@@ -119,5 +121,10 @@ public class HorseMovement : MonoBehaviour
     public int GetApplesCount()
     {
         return apples.Count;
+    }
+
+    public int GetLastSteps()
+    {
+        return lastSteps;
     }
 }
